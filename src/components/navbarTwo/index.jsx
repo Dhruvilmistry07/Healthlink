@@ -12,7 +12,7 @@ import colors from "../../theme/color";
 const navItems = [
   { type: "logo", label: "MyBrand", href: "/home", logo: "/image/logo.png" },
   { type: "link", label: "Home", href: "/home" },
-  { type: "link", label: "Features", href: "/features" },
+  { type: "link", label: "Health Plan", href: "/healthplan" },
   { type: "link", label: "Patient List", href: "/patientlist" },
   { type: "link", label: "About", href: "/about" },
   { type: "button", label: "Sign Up", href: "/signup" },
