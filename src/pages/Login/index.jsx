@@ -156,7 +156,7 @@ const Login = () => {
               error={Boolean(errors.password)}
               helperText={errors.password} />
 
-            <div className="text-right">
+            <div className="text-right mb-3">
               <Link
                 to="/forget-password"
                 className="text-blue-600 hover:underline text-sm"
@@ -173,7 +173,7 @@ const Login = () => {
           </form>
 
           <p className="text-center mt-6 text-gray-600 text-sm">
-            Don’t have an account?
+            Don’t have an account?{" "}
             <Link
               to="/signup"
               className="text-blue-600 hover:underline font-semibold"

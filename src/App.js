@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from "./pages/Login/index.jsx";
-
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 import Signup from "./pages/Signup/index.jsx";
 import Patientlist from "./pages/Patientlist/index.jsx"
 import Forgot from "./pages/Forget/index.jsx";
@@ -15,6 +15,7 @@ import About from './pages/About/index.jsx';
 function App() {
   return (
      <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

@@ -12,7 +12,8 @@ const index = () => {
               style={{
                 backgroundColor: colors.excel,
                 color: colors.avatarText, marginTop: "px",
-                paddingTop: "50px", paddingBottom: "20px"
+                paddingTop: "80px", paddingBottom: "20px",
+                height:"350px"
               }}>
       
               <Container maxWidth="full">
@@ -24,7 +25,7 @@ const index = () => {
                       src="/image/logo.png" alt="Logo"
                       style={{ paddingLeft: "10px", height: 80, marginBottom: "16px", mixBlendMode: colors.logoMix }} />
       
-                    <Typography variant="body2" >
+                    <Typography variant="body2" sx={{marginLeft:"30px"}} >
                       Bliss Fertility Center provides trusted healthcare services
                       with compassion and innovation, ensuring a healthier tomorrow.
                     </Typography>
@@ -33,11 +34,11 @@ const index = () => {
       
       
       
-                  <Grid item xs={12} md={3} >
+                  <Grid item xs={12} md={3} sx={{margin:"20px"}} >
                     <Typography variant="h6" color='black' gutterBottom fontWeight={600}>
                       Learn More
                     </Typography>
-                    <div style={{ display: "flex", flexDirection: "column", gap: "8px", color: colors.navbarText }}>
+                    <div style={{ display: "flex", flexDirection: "column", color: colors.navbarText }}>
                       <Link href="/about" color="inherit" underline="hover">
                         About Us
                       </Link>
@@ -51,7 +52,7 @@ const index = () => {
                   </Grid>
       
       
-                  <Grid item xs={12} md={3}>
+                  <Grid item xs={12} md={3} sx={{marginTop:"20px"}}>
                     <Typography variant="h6" color='black' gutterBottom fontWeight={600}>
                       Contact Us
                     </Typography>
@@ -62,7 +63,7 @@ const index = () => {
                       <Link href="/contact" color="inherit" underline="hover">
                         Contact
                       </Link>
-                      <div style={{ marginTop: "8px", display: "flex", gap: "10px" }}>
+                      <div style={{ marginTop: "px", display: "flex", gap: "10px" }}>
                         <IconButton sx={{ color: colors.navbarText }} href="https://facebook.com">
                           <FacebookIcon />
       
@@ -75,7 +76,7 @@ const index = () => {
                   </Grid>
       
                   {/* Find Us */}
-                  <Grid item xs={12} md={3}>
+                  <Grid item xs={12} md={3} sx={{margin:"20px"}}>
                     <Typography variant="h6" color='black' gutterBottom fontWeight={600}>
                       Find Us
                     </Typography>

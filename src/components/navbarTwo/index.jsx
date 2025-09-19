@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import Buttons from "../../components/Buttons";
 import colors from "../../theme/color";
+import { NavLink } from "react-router-dom";
 
 const navItems = [
   { type: "logo", label: "MyBrand", href: "/home", logo: "/image/logo.png" },
@@ -16,7 +17,7 @@ const navItems = [
   { type: "link", label: "Patient List", href: "/patientlist" },
   { type: "link", label: "About", href: "/about" },
   { type: "button", label: "Sign Up", href: "/signup" },
-  { type: "btn", label: "Log in" , href: "/"},
+  { type: "btn", label: "Log in", href: "/" },
 ];
 
 export default function Navbar() {
@@ -26,7 +27,7 @@ export default function Navbar() {
   const handleCloseNavMenu = () => setAnchorElNav(null);
 
   return (
-    <AppBar 
+    <AppBar
       position="sticky"
       color="transparent"
       elevation={2}
@@ -34,7 +35,8 @@ export default function Navbar() {
       sx={{
         px: { xs: 2, md: 6 },
         py: 1,
-        backgroundColor:colors.excel}}>
+        backgroundColor: colors.excel
+      }}>
 
       {/* Single Flex Row */}
       <div
@@ -43,21 +45,21 @@ export default function Navbar() {
           alignItems: "center",
           justifyContent: "space-between",
           width: "100%",
-        
+
         }}
       >
-       
-        <img 
-         
+
+        <img
+
           src={navItems.find((i) => i.type === "logo").logo}
           alt="Logo"
           style={{
-            mixBlendMode:colors.logoMix,
+            mixBlendMode: colors.logoMix,
             height: 70,
             cursor: "pointer",
             marginLeft: "-10px",
           }}
-          onClick={() => navigate("/home")}/>
+          onClick={() => navigate("/home")} />
 
         <div
           style={{
@@ -75,26 +77,25 @@ export default function Navbar() {
                 key={page.label}
                 onClick={() => navigate(page.href)}
                 sx={{
-                  color: "text.primary",
-                  backgroundColor: "transparent !important", 
+                  color:location.pathname === page.href ? "primary.main" : "text.primary",
+                  backgroundColor: "transparent !important",
                   display: { xs: "none", md: "inline-flex" },
-                  fontWeight: 500,
+                  fontWeight: location.pathname === page.href ? 700 : 500,
                   fontSize: "1.3rem",
                   position: "relative",
-                  "&:hover": { color: "secondary.main" },
+                  "&:hover": { color: "primary.main" },
                   "&::after": {
                     content: '""',
                     position: "absolute",
-                    width: "0%",
+                    width:location.pathname === page.href ? "100%" : "0%",
                     height: "2px",
-                    bottom: -2,
+                    bottom: 3,
                     left: 0,
-                    bgcolor: "secondary.main",
-                    transition: "width 0.3s",
+                    bgcolor: "primary.main",
+                    transition: "width 0.6s",
                   },
                   "&:hover::after": { width: "100%" },
-                }}
-              >
+                }}>
                 {page.label}
               </Button>
             ))}
@@ -102,7 +103,7 @@ export default function Navbar() {
         </div>
 
         <div style={{ display: "flex", alignItems: "center" }}>
-     
+
 
           <IconButton
             size="large"
@@ -156,10 +157,10 @@ export default function Navbar() {
               )}
           </Menu>
 
-   
+
           <Button
             variant="contained"
-              onClick={() => navigate("/signup")}
+            onClick={() => navigate("/signup")}
             sx={{
               ml: 2,
               borderRadius: "12px",
@@ -177,16 +178,16 @@ export default function Navbar() {
             {navItems.find((i) => i.type === "button").label}
           </Button>
           <Button
-          variant="outlined"
-          onClick={()=> navigate('/')}
-          sx={{
-            ml:2,
-            borderRadius: "12px",
-            textTransform: "none",
-            fontWeight: 600,
-            height:"4.9vh"
-          }}>
-            {navItems.find((i)=> i.type === "btn").label}
+            variant="outlined"
+            onClick={() => navigate('/')}
+            sx={{
+              ml: 2,
+              borderRadius: "12px",
+              textTransform: "none",
+              fontWeight: 600,
+              height: "4.9vh"
+            }}>
+            {navItems.find((i) => i.type === "btn").label}
 
           </Button>
         </div>

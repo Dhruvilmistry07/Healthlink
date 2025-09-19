@@ -48,8 +48,6 @@ const cardData = [
 const hindex = () => {
 
 
-
-
   const images = [
     "/image/green.jpeg",
     "/image/item1.jpg",
@@ -62,9 +60,11 @@ const hindex = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
+     
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
 
 
 
@@ -238,7 +238,7 @@ const hindex = () => {
 
         {/* Right Side - Text */}
         <motion.div
-          style={{ flex: 1, paddingLeft: "50px" }}
+          style={{ flex: 1, }}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -340,7 +340,7 @@ const hindex = () => {
       {/* -----------------------------------------------------about-------------------------------- */}
 
 
-      <Grid item xs={12} md={6} sx={{ backgroundColor: colors.global, p: { xs: 2, md: 4, lg: 6 } }}>
+      <Grid item xs={12} md={6} sx={{ backgroundColor: colors.global, padding:"80px", marginRight:"80xp" }}>
         {/* Title */}
         <Typography
           variant="h4"
@@ -361,10 +361,10 @@ const hindex = () => {
           variant="body1"
           color="text.secondary"
           sx={{
-            px: { xs: 2, sm: 4, md: 6 }, // responsive horizontal padding
-            textAlign: "center",
+            px: { xs: 2, sm: 4, md: 6 }, 
+            textAlign: "",
             lineHeight: 1.8,
-            mb: 2,
+            mb: " ",
           }}
           paragraph
         >
@@ -372,7 +372,18 @@ const hindex = () => {
           holistic approach. Our experienced doctors and compassionate staff
           ensure that every patient receives the attention and care they
           deserve. We combine advanced technology with empathy to deliver
-          trusted and reliable healthcare.
+          trusted and reliable healthcare.With state-of-the-art facilities and a focus on innovation, we aim to
+          make healthcare accessible, affordable, and trustworthy for
+          everyone. We believe in building healthier communities by blending
+          science, care, and compassion.
+          With state-of-the-art facilities and a focus on innovation, we aim to
+          make healthcare accessible, affordable, and trustworthy for
+          everyone. We believe in building healthier communities by blending
+          science, care, and compassion.
+          With state-of-the-art facilities and a focus on innovation, we aim to
+          make healthcare accessible, affordable, and trustworthy for
+          everyone. We believe in building healthier communities by blending
+          science, care, and compassion.
         </Typography>
 
         {/* Paragraph 2 */}
@@ -381,7 +392,7 @@ const hindex = () => {
           color="text.secondary"
           sx={{
             px: { xs: 2, sm: 4, md: 6 },
-            textAlign: "center",
+            textAlign: "",
             lineHeight: 1.8,
           }}
           paragraph

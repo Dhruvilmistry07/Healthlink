@@ -1,12 +1,13 @@
-import React from 'react'
+import React ,{ useState }  from 'react'
 import Navbar from '../../components/navbarTwo'
 import { Typography , Button, Grid, Card, CardContent,CardActions, } from '@mui/material'
 import colors from '../../theme/color'
 import Footer from '../../components/footer'
+
   
   
 
-const index = () => {
+const index = ( ) => {
 
      const solutions = [
     {
@@ -43,6 +44,10 @@ const index = () => {
       
     },
   ];
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
 
   return (
@@ -84,8 +89,8 @@ const index = () => {
             <Button
               variant="contained"
               color="primary"
-              style={{ borderRadius: "12px", padding: "10px 30px" }}
-            >
+              onClick={handleOpen}
+              style={{ borderRadius: "12px", padding: "10px 30px" }}>
               Book a demo
             </Button>
             <Button
@@ -158,12 +163,12 @@ const index = () => {
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
               style={{
-                borderRadius: "16px",
+                borderRadius: "25px",
                 boxShadow: plan.highlight
                   ? "0px 8px 25px rgba(0,150,136,0.3)"
                   : "0px 6px 18px rgba(0,0,0,0.1)",
-                border: plan.highlight ? "2px solid #009688" : "none",
-                height: "100%",
+                border: plan.highlight ? "4px solid #009688" : "none",
+                height: "100%x",
                 width: "400px"
               }}
             >

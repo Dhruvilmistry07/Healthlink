@@ -1,5 +1,4 @@
-import { colors } from "@mui/material";
-import { color } from "framer-motion";
+
 
 const baseFont = "'Montserrat', sans-serif";
 
@@ -50,12 +49,12 @@ const typography = {
   },
 
   body1: {
-    fontSize: "1rem",
+    fontSize: "1.2rem",
     fontFamily: baseFont,
   },
 
   body2: {
-    fontSize: "0.875rem",
+    fontSize: "1rem",
     fontFamily: baseFont,
     color: " black"
   },

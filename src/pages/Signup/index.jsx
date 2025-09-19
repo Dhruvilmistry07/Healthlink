@@ -210,7 +210,7 @@ const Signup = () => {
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}
             className="text-center mt-8 text-gray-600 text-lg">
-            Already have an account?
+            Already have an account?{" "}
             <Link to="/" className="text-blue-600 hover:underline font-semibold">
               Log In
             </Link>

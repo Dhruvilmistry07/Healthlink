@@ -1,9 +1,11 @@
 
 import React, { useState, useEffect } from "react";
 import SearchBar from "../../components/searchBar/index.jsx";
-import Navbar from "../../components/navbar/index.jsx";
+import Navbar1 from "../../components/navbar/index.jsx";
+import Navbar from "../../components/navbarTwo/index.jsx";
 import PatientDialog from "../../components/patientDialog/index.jsx";
 import PatientsTable from "../../components/patientsTable/index.jsx";
+import colors from "../../theme/color.js";
 // import Loader from "../../components/loader/index.jsx";
 
 
@@ -51,8 +53,11 @@ const Patientlist = () => {
   // if (loading ) return <Loader />;
 
   return (
-    <div style={{ display: "flex" }}>
-      <Navbar openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
+    <>
+    {/* <Navbar/> */}
+    <div style={{ display: "flex" , background:colors.global}}>
+      <Navbar1 openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
+    
     
       
       <div style={{flexGrow: 1, transition: "margin 0.3s", marginLeft: openSidebar ? 200 : 60, padding: 16}}>
@@ -95,6 +100,7 @@ const Patientlist = () => {
       </div>
     
     </div>
+    </>
   );
 };
 
